@@ -3,6 +3,8 @@ package de.luenidev.shop.CustomerService.domain;
 
 import de.luenidev.shop.CustomerService.model.Customer;
 
+import java.util.Collection;
+
 /**
  * CustomerService interface.
  *
@@ -10,6 +12,7 @@ import de.luenidev.shop.CustomerService.model.Customer;
  */
 public interface CustomerService {
 
+    public Collection<Customer> getAllCustomer();
     /**
      * Get a customer by ID-
      * @param id

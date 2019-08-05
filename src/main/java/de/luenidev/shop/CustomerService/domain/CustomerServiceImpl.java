@@ -5,11 +5,23 @@ import de.luenidev.shop.CustomerService.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Collection;
+import java.util.Collections;
+
+/**
+ * Implementation of {@link CustomerService}.
+ * @author ctschubel
+ */
 @Service
 public class CustomerServiceImpl implements CustomerService {
 
     @Autowired
     private CustomerRepository custRepo;
+
+    @Override
+    public Collection<Customer> getAllCustomer() {
+        return Collections.emptyList();
+    }
 
     @Override
     public Customer getCustomer(String id) {
