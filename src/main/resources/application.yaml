@@ -1,10 +1,12 @@
 spring:
   datasource:
     driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://192.168.99.100:3306/test
+    url: jdbc:mysql://192.168.99.100:3306/shop-customer
     username: test
     password: test
   jpa:
     hibernate.ddl-auto: update
     generate-ddl: true
     show-sql: true
+    database: mysql
+    properties.hibernate.dialect: org.hibernate.dialect.MariaDBDialect
