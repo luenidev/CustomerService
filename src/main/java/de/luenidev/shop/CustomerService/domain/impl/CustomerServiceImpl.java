@@ -1,12 +1,12 @@
-package de.luenidev.shop.CustomerService.domain;
+package de.luenidev.shop.CustomerService.domain.impl;
 
+import de.luenidev.shop.CustomerService.domain.CustomerService;
 import de.luenidev.shop.CustomerService.model.Customer;
 import de.luenidev.shop.CustomerService.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Collection;
-import java.util.Collections;
+import java.util.List;
 
 /**
  * Implementation of {@link CustomerService}.
@@ -19,8 +19,8 @@ public class CustomerServiceImpl implements CustomerService {
     private CustomerRepository custRepo;
 
     @Override
-    public Collection<Customer> getAllCustomer() {
-        return Collections.emptyList();
+    public List<Customer> getAllCustomers() {
+        return custRepo.findAll();
     }
 
     @Override
